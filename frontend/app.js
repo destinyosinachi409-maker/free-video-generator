@@ -6,7 +6,7 @@
 // const API_BASE_URL = 'http://localhost:3000/api';
 
 // For Render deployment (you'll update this in Step 6):
-const API_BASE_URL = 'https://YOUR-RENDER-APP-NAME.onrender.com/api';
+const API_BASE_URL = 'https://free-video-generator-2.onrender.com/api';
 
 // ============================================
 // DOM ELEMENTS
