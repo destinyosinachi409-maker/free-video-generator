@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Free AI Video Generator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🎬 Free AI Video Generator</h1>
+      <p>Powered by ZSky AI — No signup, no payment, no API key</p>
+    </header>
+
+    <main>
+      <div class="info-box">
+        <strong>💡 How it works:</strong>
+        <ul>
+          <li>Type what you want to see in the video</li>
+          <li>Click "Generate Video"</li>
+          <li>Wait 30-60 seconds</li>
+          <li>Your video appears below!</li>
+        </ul>
+        <p class="limit-note">⚠️ Free tier: 5 second videos, 10 requests per minute</p>
+      </div>
+
+      <div class="input-group">
+        <label for="prompt">Describe your video:</label>
+        <textarea 
+          id="prompt" 
+          placeholder="Example: A cute cat playing with a ball of yarn in a sunny living room..."
+          rows="4"
+        ></textarea>
+      </div>
+
+      <div class="input-group">
+        <label for="duration">Duration:</label>
+        <select id="duration">
+          <option value="5">5 seconds (Free)</option>
+        </select>
+      </div>
+
+      <button id="generate-btn" class="generate-btn">
+        <span class="btn-text">🎬 Generate Free Video</span>
+        <span class="btn-loader hidden">⏳ Generating... Please wait...</span>
+      </button>
+
+      <div id="status-area" class="status-area hidden">
+        <div class="progress-bar">
+          <div id="progress-fill" class="progress-fill"></div>
+        </div>
+        <p id="status-text">Sending request to free AI server...</p>
+        <p class="sub-status">This may take 30-60 seconds on free tier</p>
+      </div>
+
+      <div id="result-area" class="result-area hidden">
+        <h3>🎉 Your Video is Ready!</h3>
+        <video id="result-video" controls autoplay></video>
+        <div class="result-actions">
+          <a id="download-btn" class="download-btn" download>⬇️ Download MP4</a>
+          <button id="new-video-btn" class="secondary-btn">Create Another</button>
+        </div>
+      </div>
+
+      <div id="error-area" class="error-area hidden">
+        <h3>❌ Something went wrong</h3>
+        <p id="error-text"></p>
+        <button id="retry-btn" class="secondary-btn">Try Again</button>
+      </div>
+    </main>
+
+    <footer>
+      <p>Made with ❤️ | Free tier powered by <a href="https://zsky.ai" target="_blank">ZSky AI</a></p>
+      <p class="small">No credit card required • No signup needed • Open source</p>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
